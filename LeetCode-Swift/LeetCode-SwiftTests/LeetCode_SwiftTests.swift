@@ -17,3 +17,11 @@ struct LeetCode_SwiftTests {
     }
 
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_217() async throws {
+        let res = Solution_ContainsDuplicate().containsDuplicate([1,2,3,1])
+        #expect(res == true)
+    }
+}
