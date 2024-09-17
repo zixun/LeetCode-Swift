@@ -25,3 +25,10 @@ extension LeetCode_SwiftTests {
         #expect(res == true)
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_167() async throws {
+        let res = Solution_TwoSumII_InputArrayIsSorted().twoSum([2,7,11,15], 9)
+        #expect(res == [1,2])
+    }
+}
