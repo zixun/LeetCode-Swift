@@ -32,3 +32,14 @@ extension LeetCode_SwiftTests {
         #expect(res == [1,2])
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_234() async throws {
+        let nodes = [1,2,3,3,2,1].map { ListNode($0) }
+        for i in 0..<nodes.count - 1 {
+            nodes[i].next = nodes[i + 1]
+        }
+        let res = Solution_234_PalindromeLinkedList().isPalindrome(nodes[0])
+        #expect(res == true)
+    }
+}
