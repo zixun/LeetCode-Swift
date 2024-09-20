@@ -43,3 +43,19 @@ extension LeetCode_SwiftTests {
         #expect(res == true)
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_590() async throws {
+        // 创建测试用的 N 叉树
+        let root = Node(1)
+        let node3 = Node(3)
+        let node2 = Node(2)
+        let node4 = Node(4)
+        let node5 = Node(5)
+        root.children = [node3, node2, node4]
+        node3.children = [node5]
+        let expected = [5,3,2,4,1]
+        let result = Solution_590_N_aryTreePostorderTraversal().postorder(root)
+        #expect(expected == result)
+    }
+}

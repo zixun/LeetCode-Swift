@@ -22,6 +22,7 @@ class Solution_234_PalindromeLinkedList {
             guard head != nil else {
                 return false
             }
+            var a = [1,2,3]
 
             frontPointer = head
             
