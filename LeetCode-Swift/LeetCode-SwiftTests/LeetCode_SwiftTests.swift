@@ -59,3 +59,17 @@ extension LeetCode_SwiftTests {
         #expect(expected == result)
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test
+    func test_94() async throws {
+        let root = TreeNode(1)
+        root.right = TreeNode(2)
+        root.right?.left = TreeNode(3)
+        
+        let solution = Solition_94_BinaryTree_InorderTraversal()
+        let result = solution.inorderTraversal(root)
+        #expect(result == [1,3,2])
+    }
+}
