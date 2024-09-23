@@ -73,3 +73,29 @@ extension LeetCode_SwiftTests {
         #expect(result == [1,3,2])
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test()
+    func test_19() async throws {
+        let solution = Solution_19_RemoveNthNodeFromEndofList()
+
+    // create linklist 1->2->3->4->5
+    let node1 = ListNode(1)
+    let node2 = ListNode(2)
+    let node3 = ListNode(3)
+    let node4 = ListNode(4)
+    let node5 = ListNode(5)
+    node1.next = node2
+    node2.next = node3
+    node3.next = node4
+    node4.next = node5
+
+    let result = solution.removeNthFromEnd(node1, 2)
+
+    
+    #expect(result?.val == 1)
+    #expect(result?.next?.val == 2)
+    #expect(result?.next?.next?.val == 3)
+    #expect(result?.next?.next?.next?.val == 5)
+    }
+}
