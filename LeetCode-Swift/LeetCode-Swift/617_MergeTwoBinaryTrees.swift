@@ -12,7 +12,7 @@ class Solution_617_MergeTwoBinaryTrees {
             return root1 ?? root2
         }
 
-        var node = TreeNode()
+        let node = TreeNode()
         node.val = (root1!.val + root2!.val)
 
         node.left = mergeTrees(root1!.left, root2!.left)
