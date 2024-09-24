@@ -118,6 +118,34 @@ extension LeetCode_SwiftTests {
         let result = Solution_617_MergeTwoBinaryTrees().mergeTrees(t1, t2)
         #expect(result?.val == expectedResult.val)
     }
-    
-    
+}
+
+extension LeetCode_SwiftTests {
+    @Test()
+    func test_160(){
+        
+        let nodeA1 = ListNode(1)
+        let nodeA2 = ListNode(2)
+        let nodeA3 = ListNode(3)
+        let nodeA4 = ListNode(4)
+        let nodeA5 = ListNode(5)
+        nodeA1.next = nodeA2
+        nodeA2.next = nodeA3
+        nodeA3.next = nodeA4
+        nodeA4.next = nodeA5
+
+        let nodeB1 = ListNode(6)
+        let nodeB2 = ListNode(7)
+        let nodeB3 = ListNode(8)
+        nodeB1.next = nodeB2
+        nodeB2.next = nodeB3
+
+        let intersectionNode = ListNode(9)
+        nodeA5.next = intersectionNode
+        nodeB3.next = intersectionNode
+
+        let solution = Solution_160_IntersectionofTwoLinkedLists()
+        let result = solution.getIntersectionNode(nodeA1, nodeB1)
+        #expect(result?.val == 9)
+    }
 }
