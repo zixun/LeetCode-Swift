@@ -99,3 +99,25 @@ extension LeetCode_SwiftTests {
     #expect(result?.next?.next?.next?.val == 5)
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test()
+    func test_617(){
+        let t1 = TreeNode(1)
+        t1.left = TreeNode(3)
+        t1.right = TreeNode(2)
+        
+        let t2 = TreeNode(2)
+        t2.left = TreeNode(1)
+        t2.right = TreeNode(3)
+        
+        let expectedResult = TreeNode(3)
+        expectedResult.left = TreeNode(4)
+        expectedResult.right = TreeNode(5)
+        let result = Solution_617_MergeTwoBinaryTrees().mergeTrees(t1, t2)
+        #expect(result?.val == expectedResult.val)
+    }
+    
+    
+}
