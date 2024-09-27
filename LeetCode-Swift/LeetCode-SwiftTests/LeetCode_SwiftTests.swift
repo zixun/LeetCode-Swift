@@ -10,8 +10,7 @@ import Testing
 
 struct LeetCode_SwiftTests {
 
-    @Test
-    func example() async throws {
+    @Test func example() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.
         let res = Solution_TwoSum().twoSum([2,7,11,15], 9)
         #expect(res == [0, 1])
@@ -21,24 +20,23 @@ struct LeetCode_SwiftTests {
 
 extension LeetCode_SwiftTests {
     
-    @Test
-    func test_217() async throws {
+    @Test func test_217() async throws {
         let res = Solution_ContainsDuplicate().containsDuplicate([1,2,3,1])
         #expect(res == true)
     }
 }
 
 extension LeetCode_SwiftTests {
-    @Test
-    func test_167() async throws {
+    
+    @Test func test_167() async throws {
         let res = Solution_TwoSumII_InputArrayIsSorted().twoSum([2,7,11,15], 9)
         #expect(res == [1,2])
     }
 }
 
 extension LeetCode_SwiftTests {
-    @Test
-    func test_234() async throws {
+    
+    @Test func test_234() async throws {
         let nodes = [1,2,3,3,2,1].map { ListNode($0) }
         for i in 0..<nodes.count - 1 {
             nodes[i].next = nodes[i + 1]
@@ -49,8 +47,8 @@ extension LeetCode_SwiftTests {
 }
 
 extension LeetCode_SwiftTests {
-    @Test
-    func test_590() async throws {
+    
+    @Test func test_590() async throws {
         // 创建测试用的 N 叉树
         let root = Node(1)
         let node3 = Node(3)
@@ -67,8 +65,7 @@ extension LeetCode_SwiftTests {
 
 extension LeetCode_SwiftTests {
     
-    @Test
-    func test_94() async throws {
+    @Test func test_94() async throws {
         let root = TreeNode(1)
         root.right = TreeNode(2)
         root.right?.left = TreeNode(3)
@@ -81,8 +78,7 @@ extension LeetCode_SwiftTests {
 
 extension LeetCode_SwiftTests {
     
-    @Test()
-    func test_19() async throws {
+    @Test() func test_19() async throws {
         let solution = Solution_19_RemoveNthNodeFromEndofList()
 
     // create linklist 1->2->3->4->5
@@ -107,8 +103,7 @@ extension LeetCode_SwiftTests {
 
 extension LeetCode_SwiftTests {
     
-    @Test()
-    func test_617(){
+    @Test() func test_617(){
         let t1 = TreeNode(1)
         t1.left = TreeNode(3)
         t1.right = TreeNode(2)
@@ -126,8 +121,8 @@ extension LeetCode_SwiftTests {
 }
 
 extension LeetCode_SwiftTests {
-    @Test()
-    func test_160(){
+    
+    @Test() func test_160(){
         
         let nodeA1 = ListNode(1)
         let nodeA2 = ListNode(2)
@@ -156,8 +151,8 @@ extension LeetCode_SwiftTests {
 }
 
 extension LeetCode_SwiftTests {
-    @Test()
-    func test_226(){
+    
+    @Test() func test_226(){
         let root = TreeNode(4,
                             TreeNode(2,
                                      TreeNode(1),
