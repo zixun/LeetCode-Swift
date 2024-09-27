@@ -176,3 +176,15 @@ extension LeetCode_SwiftTests {
         
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_9() async throws {
+        let solution = Solution_9_PalindromeNumber()
+        let res_odd = solution.isPalindrome(12321)
+        let res_even = solution.isPalindrome(1221)
+        
+        #expect(res_odd == true)
+        #expect(res_even == true)
+    }
+}
