@@ -154,3 +154,25 @@ extension LeetCode_SwiftTests {
         #expect(result?.val == 9)
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test()
+    func test_226(){
+        let root = TreeNode(4,
+                            TreeNode(2,
+                                     TreeNode(1),
+                                     TreeNode(3)),
+                            TreeNode(7,
+                                     TreeNode(6),
+                                     TreeNode(9)))
+        let invertedRoot = Solution_226_InvertBinaryTree().invertTree(root)
+        #expect(invertedRoot?.val == 4)
+        #expect(invertedRoot?.left?.val == 7)
+        #expect(invertedRoot?.right?.val == 2)
+        #expect(invertedRoot?.left?.left?.val == 9)
+        #expect(invertedRoot?.left?.right?.val == 6)
+        #expect(invertedRoot?.right?.left?.val == 3)
+        #expect(invertedRoot?.right?.right?.val == 1)
+        
+    }
+}
