@@ -183,3 +183,14 @@ extension LeetCode_SwiftTests {
         #expect(res_even == true)
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test()
+    func test_7() async throws {
+        let solution = Solution_7_ReverseIntegeer()
+        let res1 = solution.reverse(-321)
+        #expect(res1 == -123)
+    }
+    
+}
