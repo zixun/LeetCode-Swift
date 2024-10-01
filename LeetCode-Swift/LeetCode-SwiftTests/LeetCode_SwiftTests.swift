@@ -192,5 +192,25 @@ extension LeetCode_SwiftTests {
         let res1 = solution.reverse(-321)
         #expect(res1 == -123)
     }
-    
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_141() async throws {
+        // 无环链表测试
+        let node1 = ListNode(1)
+        let node2 = ListNode(2)
+        let node3 = ListNode(3)
+        node1.next = node2
+        node2.next = node3
+        
+        let solution = Solution_141_LinkedListCycle()
+        #expect(solution.hasCycle(node1) == false)
+        
+        // 有环链表测试
+        node3.next = node1
+        #expect(solution.hasCycle(node1) == true)
+    }
+}
+
+
