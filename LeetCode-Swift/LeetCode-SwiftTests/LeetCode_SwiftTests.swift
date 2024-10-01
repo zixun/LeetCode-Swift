@@ -213,4 +213,23 @@ extension LeetCode_SwiftTests {
     }
 }
 
-
+extension LeetCode_SwiftTests {
+    @Test() func test_146() async throws {
+        let lRUCache = Solution_146_LRUCache(2) // -1 -- -1
+        lRUCache.put(2, 1)                      // -1 -- 2:1 -- -1
+        lRUCache.put(1, 1)                      // -1 -- 1:1 -- 2:1 -- -1
+        lRUCache.put(2, 3)                      // -1 -- 1:1 -- 2:3 -- -1    -1 -- 2:3 -- 1:1 -- -1
+        lRUCache.put(4, 1)                      // -1 -- 4:1 -- 2:3 -- 1:1 -- -1   -1 -- 4:1 -- 2:3 -- -1
+        var res = lRUCache.get(1)
+        #expect(res == -1)
+        res = lRUCache.get(2)
+        #expect(res == 3)
+        
+//       XCTAssertNil(lRUCache.put(3, 3))
+//       XCTAssertEqual(lRUCache.get(2), -1)
+//       XCTAssertNil(lRUCache.put(4, 4))
+//       XCTAssertEqual(lRUCache.get(1), -1)
+//       XCTAssertEqual(lRUCache.get(3), 3)
+//       XCTAssertEqual(lRUCache.get(4), 4)
+    }
+}
