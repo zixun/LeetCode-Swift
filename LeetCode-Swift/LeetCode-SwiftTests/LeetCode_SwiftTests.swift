@@ -233,3 +233,42 @@ extension LeetCode_SwiftTests {
 //       XCTAssertEqual(lRUCache.get(4), 4)
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test() func test_1670() async throws {
+        let sol = Solution_1670_DesignFrontMiddleBackQueue()
+//        sol.pushFront(1)
+//        sol.pushBack(2)
+//        sol.pushMiddle(3)
+//        sol.pushMiddle(4)
+//        
+//        // 1432  
+//        let ret_4: Int = sol.popFront()
+//        #expect(ret_4 == 1)
+//        // 432
+//        let ret_5: Int = sol.popMiddle()
+//        #expect(ret_5 == 3)
+//        // 42
+//        let ret_6: Int = sol.popMiddle()
+//        // 4
+//        #expect(ret_6 == 4)
+//        let ret_7: Int = sol.popBack()
+//        #expect(ret_7 == 2)
+//        
+//        let ret_8: Int = sol.popFront()
+//        #expect(ret_8 == -1)
+        
+        sol.pushMiddle(3)
+        sol.pushFront(6)
+        sol.pushMiddle(6)
+        sol.pushMiddle(3) // 663
+        // 6363
+        let r1 = sol.popMiddle()
+        #expect(r1 == 3)
+        sol.pushMiddle(7)
+        let r2 = sol.popMiddle()
+        #expect(r2 == 7)
+        sol.pushMiddle(8)
+    }
+}

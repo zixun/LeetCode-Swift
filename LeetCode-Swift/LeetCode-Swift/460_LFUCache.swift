@@ -5,7 +5,7 @@
 //  Created by zixun on 2024/10/2.
 //
 
-class LFUCache {
+class Solution_LFUCache {
     private let capacity: Int
     private var map = [Int : Node]()
     private var freqMap = [Int : DoubleLinkedList]()
@@ -51,7 +51,7 @@ class LFUCache {
 }
 
 
-private extension LFUCache {
+private extension Solution_LFUCache {
     @discardableResult
     func updateNode(node: Node) -> Node {
         let curFreq = node.freq
