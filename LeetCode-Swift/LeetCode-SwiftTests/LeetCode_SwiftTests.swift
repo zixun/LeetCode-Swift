@@ -272,3 +272,23 @@ extension LeetCode_SwiftTests {
         sol.pushMiddle(8)
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test()
+    func test_56() async throws {
+        let solution = Solution_56_MergeIntervals()
+        let intervals = [
+            [1, 3],
+            [2, 6],
+            [8, 10],
+            [15, 18],
+           
+        ]
+        let mergedIntervals = solution.merge(intervals)
+        #expect(mergedIntervals.count == 3)
+        #expect(mergedIntervals[0] == [1, 6])
+        #expect(mergedIntervals[1] == [8, 10])
+        #expect(mergedIntervals[2] == [15, 18])
+    }
+}
