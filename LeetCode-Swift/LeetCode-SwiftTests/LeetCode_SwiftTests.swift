@@ -303,3 +303,13 @@ extension LeetCode_SwiftTests {
         #expect(solution.ping(3002) == 3)
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_239() async throws {
+        let sol = Solution_239_SlidingWindowMaximum()
+//        let res = sol.maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3)
+//        #expect(res == [3,3,5,5,6,7])
+        let res = sol.maxSlidingWindow([1,-1], 1)
+        #expect(res == [1,-1])
+    }
+}

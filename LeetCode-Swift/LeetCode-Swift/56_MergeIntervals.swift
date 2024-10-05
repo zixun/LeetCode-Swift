@@ -6,6 +6,7 @@
 //
 
 class Solution_56_MergeIntervals {
+    
     func merge(_ intervals: [[Int]]) -> [[Int]] {
         //initial check
         guard intervals.count >= 2 else {
