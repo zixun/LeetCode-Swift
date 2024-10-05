@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9E45B7402CB1ADE3005F429D /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 9E45B73F2CB1ADE3005F429D /* BitCollections */; };
+		9E45B7422CB1ADE3005F429D /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 9E45B7412CB1ADE3005F429D /* Collections */; };
+		9E45B7442CB1ADE3005F429D /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 9E45B7432CB1ADE3005F429D /* DequeModule */; };
+		9E45B7462CB1ADE3005F429D /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 9E45B7452CB1ADE3005F429D /* HashTreeCollections */; };
+		9E45B7482CB1ADE3005F429D /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = 9E45B7472CB1ADE3005F429D /* HeapModule */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9EDD29DB2C9749B80075FF2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -39,6 +47,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E45B7422CB1ADE3005F429D /* Collections in Frameworks */,
+				9E45B7482CB1ADE3005F429D /* HeapModule in Frameworks */,
+				9E45B7402CB1ADE3005F429D /* BitCollections in Frameworks */,
+				9E45B7462CB1ADE3005F429D /* HashTreeCollections in Frameworks */,
+				9E45B7442CB1ADE3005F429D /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +103,11 @@
 			);
 			name = "LeetCode-Swift";
 			packageProductDependencies = (
+				9E45B73F2CB1ADE3005F429D /* BitCollections */,
+				9E45B7412CB1ADE3005F429D /* Collections */,
+				9E45B7432CB1ADE3005F429D /* DequeModule */,
+				9E45B7452CB1ADE3005F429D /* HashTreeCollections */,
+				9E45B7472CB1ADE3005F429D /* HeapModule */,
 			);
 			productName = "LeetCode-Swift";
 			productReference = 9EDD29CA2C9749B70075FF2B /* LeetCode-Swift.app */;
@@ -146,6 +164,9 @@
 			);
 			mainGroup = 9EDD29C12C9749B70075FF2B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9E45B73E2CB1A914005F429D /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9EDD29CB2C9749B70075FF2B /* Products */;
 			projectDirPath = "";
@@ -442,6 +463,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E45B73E2CB1A914005F429D /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E45B73F2CB1ADE3005F429D /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E45B73E2CB1A914005F429D /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		9E45B7412CB1ADE3005F429D /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E45B73E2CB1A914005F429D /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		9E45B7432CB1ADE3005F429D /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E45B73E2CB1A914005F429D /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		9E45B7452CB1ADE3005F429D /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E45B73E2CB1A914005F429D /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		9E45B7472CB1ADE3005F429D /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E45B73E2CB1A914005F429D /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9EDD29C22C9749B70075FF2B /* Project object */;
 }
