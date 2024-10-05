@@ -292,3 +292,14 @@ extension LeetCode_SwiftTests {
         #expect(mergedIntervals[2] == [15, 18])
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_933() async throws {
+        let solution = Solution_933_NumberofRecentCalls()
+        #expect(solution.ping(1) == 1)
+        #expect(solution.ping(100) == 2)
+        #expect(solution.ping(3001) == 3)
+        #expect(solution.ping(3002) == 3)
+    }
+}
