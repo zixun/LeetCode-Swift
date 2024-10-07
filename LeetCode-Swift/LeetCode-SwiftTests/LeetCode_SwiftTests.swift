@@ -313,3 +313,29 @@ extension LeetCode_SwiftTests {
 //        #expect(res == [1,-1])
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_703() async throws {
+        //KthLargest  Solution_703_KthLargestElementinaStream
+//        let sol = Solution_703_KthLargestElementinaStream(3, [4,5,8,2])
+//        #expect(sol.add(3) == 4) //4,5,8,2,3
+//        #expect(sol.add(5) == 5)
+//        #expect(sol.add(10) == 5)
+//        let res = sol.add(9) // 4,5,8,2,3,5,10   
+//        
+//        #expect(res == 8)
+//        #expect(sol.add(4) == 8)
+        
+        let sol = Solution_703_KthLargestElementinaStream(2, [0])
+        var res = sol.add(-1)
+        #expect(res == -1)
+        
+         res = sol.add(1)
+        #expect(res == 0)
+        
+         res = sol.add(-2)
+        #expect(res == 0)
+        
+    }
+}
