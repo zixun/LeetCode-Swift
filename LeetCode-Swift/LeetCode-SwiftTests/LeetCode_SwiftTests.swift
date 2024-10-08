@@ -339,3 +339,11 @@ extension LeetCode_SwiftTests {
         
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_14() async throws {
+        let sol = Solution_14_LongestCommonPrefix()
+        let res = sol.longestCommonPrefix(["flower","flow","flight"])
+        #expect(res == "fl")
+    }
+}
