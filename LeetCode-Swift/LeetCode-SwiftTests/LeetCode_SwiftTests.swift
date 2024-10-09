@@ -347,3 +347,11 @@ extension LeetCode_SwiftTests {
         #expect(res == "fl")
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_20() async throws {
+        let sol = Solution_20_ValidParentheses()
+        let res = sol.isValid("(){}}{")
+        #expect(res == false)
+    }
+}
