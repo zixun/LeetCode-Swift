@@ -355,3 +355,33 @@ extension LeetCode_SwiftTests {
         #expect(res == false)
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_21() async throws {
+        let solution = Solution_21_MergeTwoSortedLists()
+               
+       // 创建第一个链表：1 -> 2 -> 4
+       let l1Node1 = ListNode(1)
+       let l1Node2 = ListNode(2)
+       let l1Node3 = ListNode(4)
+       l1Node1.next = l1Node2
+       l1Node2.next = l1Node3
+       
+       // 创建第二个链表：1 -> 3 -> 4
+       let l2Node1 = ListNode(1)
+       let l2Node2 = ListNode(3)
+       let l2Node3 = ListNode(4)
+       l2Node1.next = l2Node2
+       l2Node2.next = l2Node3
+       
+       let mergedList = solution.mergeTwoLists(l1Node1, l2Node1)
+       
+       // 验证合并后的链表是否正确：1 -> 1 -> 2 -> 3 -> 4 -> 4
+        #expect(mergedList?.val == 1)
+        #expect(mergedList?.next?.val == 1)
+        #expect(mergedList?.next?.next?.val == 2)
+        #expect(mergedList?.next?.next?.next?.val == 3)
+        #expect(mergedList?.next?.next?.next?.next?.val == 4)
+        #expect(mergedList?.next?.next?.next?.next?.next?.val == 4)
+    }
+}
