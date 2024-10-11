@@ -82,7 +82,7 @@ class PriorityQueue {
    6[3]  5[4]  8[5]  9[6]
  6[3] means the at the index of 3, it's value is 6
  */
-extension Int {
+fileprivate extension Int {
     
     /*
       As we can see, whether it's a left node or right node of it's parent node.

@@ -17,6 +17,7 @@ class Solution_21_MergeTwoSortedLists {
         }
         
         if list1?.val ?? 0 <= list2?.val ?? 0 {
+            // if list1 is lesser than list2, we can pick up list1,and let it's next into the recursion
             list1?.next = mergeTwoLists(list1?.next, list2)
             return list1
         }else {

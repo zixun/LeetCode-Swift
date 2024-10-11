@@ -385,3 +385,22 @@ extension LeetCode_SwiftTests {
         #expect(mergedList?.next?.next?.next?.next?.next?.val == 4)
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_23() async throws {
+        let list1 = ListNode(1, ListNode(4, ListNode(5)))
+        let list2 = ListNode(1, ListNode(3, ListNode(4)))
+        let list3 = ListNode(2, ListNode(6))
+        let sol = Solution_23_MergeKSortedLists()
+        let mergedList = sol.mergeKLists([list1,list2,list3])
+        
+        var resultArray: [Int] = []
+        var current = mergedList
+        while current != nil {
+            resultArray.append(current!.val)
+            current = current!.next
+        }
+        #expect(resultArray == [1, 1, 2, 3, 4, 4, 5, 6])
+    }
+}
