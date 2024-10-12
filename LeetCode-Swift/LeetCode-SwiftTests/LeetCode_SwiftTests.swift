@@ -404,3 +404,12 @@ extension LeetCode_SwiftTests {
         #expect(resultArray == [1, 1, 2, 3, 4, 4, 5, 6])
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_912() async throws {
+        let sol = Solution_912_SortAnArray()
+        let res = sol.sortArray([3,-1])
+        #expect(res == [-1,3])
+    }
+}
