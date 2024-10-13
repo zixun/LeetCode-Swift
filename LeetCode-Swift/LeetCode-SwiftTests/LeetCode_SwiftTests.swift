@@ -413,3 +413,12 @@ extension LeetCode_SwiftTests {
         #expect(res == [-1,3])
     }
 }
+
+extension LeetCode_SwiftTests {
+    
+    @Test func test_704() async throws {
+        let sol = Solution_704_BinarySearch()
+        let res = sol.search([2,5], -1)
+        #expect(res == -1)
+    }
+}
