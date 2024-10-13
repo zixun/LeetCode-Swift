@@ -422,3 +422,11 @@ extension LeetCode_SwiftTests {
         #expect(res == -1)
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_50() async throws {
+        let sol = Solution_50_Pow_x_n()
+        let res = sol.myPow(2, 4)
+        #expect(res == 16)
+    }
+}
