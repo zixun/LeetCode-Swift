@@ -430,3 +430,26 @@ extension LeetCode_SwiftTests {
         #expect(res == 16)
     }
 }
+
+extension LeetCode_SwiftTests {
+    @Test func test_206() async throws {
+        let solution = Solution_206_ReverseLinkedList()
+        // 创建链表 1->2->3->4->5
+        let node5 = ListNode(5)
+        let node4 = ListNode(4)
+        node4.next = node5
+        let node3 = ListNode(3)
+        node3.next = node4
+        let node2 = ListNode(2)
+        node2.next = node3
+        let node1 = ListNode(1)
+        node1.next = node2
+
+        let reversedList = solution.reverseList(node1)
+        #expect(reversedList?.val == 5)
+        #expect(reversedList?.next?.val == 4)
+        #expect(reversedList?.next?.next?.val == 3)
+        #expect(reversedList?.next?.next?.next?.val == 2)
+        #expect(reversedList?.next?.next?.next?.next?.val == 1)
+    }
+}
