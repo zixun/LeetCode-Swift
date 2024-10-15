@@ -452,4 +452,25 @@ extension LeetCode_SwiftTests {
         #expect(reversedList?.next?.next?.next?.val == 2)
         #expect(reversedList?.next?.next?.next?.next?.val == 1)
     }
+    
+    @Test func test_24() async throws {
+        let solution = Solution_24_SwapNodesInPairs()
+        // 创建链表 1->2->3->4
+        let node4 = ListNode(4)
+        let node3 = ListNode(3)
+        node3.next = node4
+        let node2 = ListNode(2)
+        node2.next = node3
+        let node1 = ListNode(1)
+        node1.next = node2
+
+        let swappedList = solution.swapPairs(node1)
+        #expect(swappedList?.val == 2)
+        #expect(swappedList?.next?.val == 1)
+        #expect(swappedList?.next?.next?.val == 4)
+        #expect(swappedList?.next?.next?.next?.val == 3)
+        #expect(swappedList?.next?.next?.next?.next == nil)
+    }
 }
+
+
