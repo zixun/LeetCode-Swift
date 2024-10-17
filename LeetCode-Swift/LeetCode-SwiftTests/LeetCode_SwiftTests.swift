@@ -471,6 +471,17 @@ extension LeetCode_SwiftTests {
         #expect(swappedList?.next?.next?.next?.val == 3)
         #expect(swappedList?.next?.next?.next?.next == nil)
     }
+    
+    @Test func test_2() async throws {
+        let l1 = ListNode(2, ListNode(4, ListNode(3, nil)))
+        let l2 = ListNode(5, ListNode(6, ListNode(4, nil)))
+        let sol = Solution_2_AddTwoNumbers()
+        let res = sol.addTwoNumbers(l1, l2)
+        
+        #expect(res?.val == 7)
+        #expect(res?.next?.val == 0)
+        #expect(res?.next?.next?.val == 8)
+    }
 }
 
 
