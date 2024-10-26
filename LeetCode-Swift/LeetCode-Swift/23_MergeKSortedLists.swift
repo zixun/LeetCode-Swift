@@ -35,6 +35,7 @@
  Input: lists = [[]]
  Output: []
  
+ 295
  */
 
 fileprivate extension Int {
