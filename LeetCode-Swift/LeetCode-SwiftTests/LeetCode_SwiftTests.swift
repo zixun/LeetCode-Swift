@@ -482,6 +482,20 @@ extension LeetCode_SwiftTests {
         #expect(res?.next?.val == 0)
         #expect(res?.next?.next?.val == 8)
     }
+    
+    @Test func test_232() async throws {
+        let queue = Solution_232_ImplementQueueUsingStacks()
+        queue.push(1)
+        queue.push(2)
+        
+        #expect(queue.peek() == 1)
+        #expect(queue.pop() == 1)
+        #expect(queue.empty() == false)
+        queue.push(3)
+        #expect(queue.pop() == 2)
+        #expect(queue.pop() == 3)
+        #expect(queue.empty() == true)
+    }
 }
 
 
