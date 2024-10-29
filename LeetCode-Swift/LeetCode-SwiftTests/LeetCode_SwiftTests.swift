@@ -496,6 +496,28 @@ extension LeetCode_SwiftTests {
         #expect(queue.pop() == 3)
         #expect(queue.empty() == true)
     }
+    
+    @Test func test_225() async throws {
+        let stack = Solution_225_ImplementStackUsingQueues()
+        stack.push(1)
+        stack.push(2)
+        #expect(stack.top() == 2)
+        #expect(stack.pop() == 2)
+        #expect(stack.empty() == false)
+        stack.push(3)
+        #expect(stack.pop() == 3)
+        #expect(stack.pop() == 1)
+        #expect(stack.empty() == true)
+    }
+    
+    @Test func test_921() async throws {
+        let solution = Solution_921_MinimumAddtoMakeParenthesesValid()
+        #expect(solution.minAddToMakeValid("())") == 1)
+        #expect(solution.minAddToMakeValid("(((") == 3)
+        #expect(solution.minAddToMakeValid("()") == 0)
+        #expect(solution.minAddToMakeValid("()))(((") == 5)
+    }
+           
 }
 
 
