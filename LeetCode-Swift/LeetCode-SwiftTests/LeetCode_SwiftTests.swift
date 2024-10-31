@@ -517,6 +517,14 @@ extension LeetCode_SwiftTests {
         #expect(solution.minAddToMakeValid("()") == 0)
         #expect(solution.minAddToMakeValid("()))(((") == 5)
     }
+    
+    @Test func test_856() async throws {
+        let solution = Solution_856_ScoreofParentheses()
+        #expect(solution.scoreOfParentheses("()") == 1)
+        #expect(solution.scoreOfParentheses("(())") == 2)
+        #expect(solution.scoreOfParentheses("()()") == 2)
+        #expect(solution.scoreOfParentheses("(()(()))") == 6)
+    }
            
 }
 

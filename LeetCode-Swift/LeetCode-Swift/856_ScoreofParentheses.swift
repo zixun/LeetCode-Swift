@@ -16,7 +16,19 @@
 class Solution_856_ScoreofParentheses {
     
     func scoreOfParentheses(_ s: String) -> Int {
-            
-        
+        let arr = Array(s)
+        var left_shift = 0
+        var res = 0
+        for i in 0 ..< arr.count {
+            if arr[i] == "(" {
+                left_shift += 1
+            }else {
+                left_shift -= 1
+                if arr[i-1] == "(" {
+                    res += 1 << left_shift
+                }
+            }
+        }
+        return res
     }
 }
