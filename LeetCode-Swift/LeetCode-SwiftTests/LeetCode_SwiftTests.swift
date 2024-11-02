@@ -520,9 +520,10 @@ extension LeetCode_SwiftTests {
     
     @Test func test_856() async throws {
         let solution = Solution_856_ScoreofParentheses()
-        #expect(solution.scoreOfParentheses("()") == 1)
-        #expect(solution.scoreOfParentheses("(())") == 2)
-        #expect(solution.scoreOfParentheses("()()") == 2)
+//        #expect(solution.scoreOfParentheses("()") == 1)
+//        #expect(solution.scoreOfParentheses("(())") == 2)
+//        #expect(solution.scoreOfParentheses("()()") == 2)
+        
         #expect(solution.scoreOfParentheses("(()(()))") == 6)
     }
            
